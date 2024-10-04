@@ -7,13 +7,13 @@
 
 module Register_RTL
 #(
-  parameter p_width = 1
+  parameter p_nbits = 1
 )(
   input  logic               clk,
   input  logic               rst,
   input  logic               en,
-  input  logic [p_width-1:0] d,
-  output logic [p_width-1:0] q
+  input  logic [p_nbits-1:0] d,
+  output logic [p_nbits-1:0] q
 );
 
   //''' LAB ASSIGNMENT '''''''''''''''''''''''''''''''''''''''''''''''''''
