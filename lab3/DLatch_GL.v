@@ -19,26 +19,13 @@ module DLatch_GL
   //''' ACTIVITY '''''''''''''''''''''''''''''''''''''''''''''''''''''''''
   // Implement a D Latch using explicit gate-level modeling
   //>'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-  //:
-  //: `ECE2300_UNUSED( clk );
-  //: `ECE2300_UNUSED( d );
-  //: `ECE2300_UNDRIVEN( q );
-  //:
 
-  wire s, r, d_b;
-
-  and( s, clk, d );
-  not( d_b, d );
-  and( r, d_b, clk );
-
-  // SR-Latch
-  wire x;
-  nor( q, r, x );
-  nor( x, q, s );
+  `ECE2300_UNUSED( clk );
+  `ECE2300_UNUSED( d );
+  `ECE2300_UNDRIVEN( q );
 
 endmodule
 
 // verilator lint_on UNOPTFLAT
 
 `endif /* DLATCH_GL_V */
-

@@ -26,38 +26,15 @@ module DFFRE_GL
   // Implement a D enabled & resettable flip-flop using DFF and mux. You
   // can also use a DFFR and a mux if you like.
   //''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-  //:
-  //: `ECE2300_UNUSED( clk );
-  //: `ECE2300_UNUSED( rst );
-  //: `ECE2300_UNUSED( en );
-  //: `ECE2300_UNUSED( d );
-  //: `ECE2300_UNDRIVEN( q );
-  //:
 
-  // Enable logic
-
-  wire en_mux_out;
-  Mux2_1b_GL en_mux
-  (
-    .in0 (q),
-    .in1 (d),
-    .sel (en),
-    .out (en_mux_out)
-  );
-
-  // DFFR
-
-  DFFR_GL dff
-  (
-    .clk (clk),
-    .rst (rst),
-    .d   (en_mux_out),
-    .q   (q)
-  );
+  `ECE2300_UNUSED( clk );
+  `ECE2300_UNUSED( rst );
+  `ECE2300_UNUSED( en );
+  `ECE2300_UNUSED( d );
+  `ECE2300_UNDRIVEN( q );
 
 endmodule
 
 // verilator lint_on UNOPTFLAT
 
 `endif /* DFFRE_GL_V */
-

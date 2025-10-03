@@ -77,15 +77,15 @@ task test_case_2_directed_reset();
   // ---- rising clock edge here ---
 
   //    clk rs d  q
-  check( 1, 1, 0, 0 /* 'x */ );
-  check( 1, 1, 1, 0 /* 'x */ );
-  check( 0, 1, 0, 0 /* 'x */ );
-  check( 0, 1, 1, 0 /* 'x */ );
+  check( 1, 1, 0, 'x );
+  check( 1, 1, 1, 'x );
+  check( 0, 1, 0, 'x );
+  check( 0, 1, 1, 'x );
 
   // ---- rising clock edge here ---
 
   //    clk rs d  q
-  check( 1, 0, 0, 0 /* 'x */ );
+  check( 1, 0, 0, 'x );
 
 endtask
 
@@ -108,23 +108,23 @@ task test_case_3_directed();
   // ---- rising clock edge here ---
 
   //    clk rs d  q
-  check( 1, 0, 0, 0 /* 'x */ );
-  check( 1, 0, 1, 0 /* 'x */ );
-  check( 0, 0, 0, 0 /* 'x */ );
-  check( 0, 0, 1, 0 /* 'x */ );
+  check( 1, 0, 0, 'x );
+  check( 1, 0, 1, 'x );
+  check( 0, 0, 0, 'x );
+  check( 0, 0, 1, 'x );
 
   // ---- rising clock edge here ---
 
   //    clk rs d  q
-  check( 1, 0, 0, 1 /* 'x */ );
-  check( 1, 0, 1, 1 /* 'x */ );
-  check( 0, 0, 0, 1 /* 'x */ );
-  check( 0, 0, 1, 1 /* 'x */ );
-  check( 0, 0, 0, 1 /* 'x */ );
+  check( 1, 0, 0, 'x );
+  check( 1, 0, 1, 'x );
+  check( 0, 0, 0, 'x );
+  check( 0, 0, 1, 'x );
+  check( 0, 0, 0, 'x );
 
   // ---- rising clock edge here ---
 
-  check( 1, 0, 0, 0 /* 'x */ ); // return to original state
+  check( 1, 0, 0, 'x ); // return to original state
 
 endtask
 

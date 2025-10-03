@@ -80,21 +80,21 @@ task test_case_2_directed_reset();
   // ---- rising clock edge here ---
 
   //    clk rs en d  q
-  check( 1, 1, 0, 0, 0 /* 'x */ ); // every en,d when clk=1, rst=1
-  check( 1, 1, 0, 1, 0 /* 'x */ );
-  check( 1, 1, 1, 0, 0 /* 'x */ );
-  check( 1, 1, 1, 1, 0 /* 'x */ );
+  check( 1, 1, 0, 0, 'x ); // every en,d when clk=1, rst=1
+  check( 1, 1, 0, 1, 'x );
+  check( 1, 1, 1, 0, 'x );
+  check( 1, 1, 1, 1, 'x );
 
   //    clk rs en d  q
-  check( 0, 1, 0, 0, 0 /* 'x */ ); // every en,d when clk=0, rst=1
-  check( 0, 1, 0, 1, 0 /* 'x */ );
-  check( 0, 1, 1, 0, 0 /* 'x */ );
-  check( 0, 1, 1, 1, 0 /* 'x */ );
+  check( 0, 1, 0, 0, 'x ); // every en,d when clk=0, rst=1
+  check( 0, 1, 0, 1, 'x );
+  check( 0, 1, 1, 0, 'x );
+  check( 0, 1, 1, 1, 'x );
 
   // ---- rising clock edge here ---
 
   //    clk rs en d  q
-  check( 1, 0, 0, 0, 0 /* 'x */ );
+  check( 1, 0, 0, 0, 'x );
 
   t.test_case_end();
 endtask
@@ -118,23 +118,23 @@ task test_case_3_directed_en1();
   // ---- rising clock edge here ---
 
   //    clk rs en d  q
-  check( 1, 0, 1, 0, 0 /* 'x */ );
-  check( 1, 0, 1, 1, 0 /* 'x */ );
-  check( 0, 0, 1, 0, 0 /* 'x */ );
-  check( 0, 0, 1, 1, 0 /* 'x */ );
+  check( 1, 0, 1, 0, 'x );
+  check( 1, 0, 1, 1, 'x );
+  check( 0, 0, 1, 0, 'x );
+  check( 0, 0, 1, 1, 'x );
 
   // ---- rising clock edge here ---
 
   //    clk rs en d  q
-  check( 1, 0, 1, 0, 1 /* 'x */ );
-  check( 1, 0, 1, 1, 1 /* 'x */ );
-  check( 0, 0, 1, 0, 1 /* 'x */ );
-  check( 0, 0, 1, 1, 1 /* 'x */ );
-  check( 0, 0, 1, 0, 1 /* 'x */ );
+  check( 1, 0, 1, 0, 'x );
+  check( 1, 0, 1, 1, 'x );
+  check( 0, 0, 1, 0, 'x );
+  check( 0, 0, 1, 1, 'x );
+  check( 0, 0, 1, 0, 'x );
 
   // ---- rising clock edge here ---
 
-  check( 1, 0, 1, 0, 0 /* 'x */ );
+  check( 1, 0, 1, 0, 'x );
 
   t.test_case_end();
 endtask
@@ -158,23 +158,23 @@ task test_case_4_directed_en0();
   // ---- rising clock edge here ---
 
   //    clk rs en d  q
-  check( 1, 0, 0, 0, 0 /* 'x */ );
-  check( 1, 0, 0, 1, 0 /* 'x */ );
-  check( 0, 0, 0, 0, 0 /* 'x */ );
-  check( 0, 0, 0, 1, 0 /* 'x */ );
+  check( 1, 0, 0, 0, 0 'x );
+  check( 1, 0, 0, 1, 0 'x );
+  check( 0, 0, 0, 0, 0 'x );
+  check( 0, 0, 0, 1, 0 'x );
 
   // ---- rising clock edge here ---
 
   //    clk rs en d  q
-  check( 1, 0, 0, 0, 0 /* 'x */ );
-  check( 1, 0, 0, 1, 0 /* 'x */ );
-  check( 0, 0, 0, 0, 0 /* 'x */ );
-  check( 0, 0, 0, 1, 0 /* 'x */ );
-  check( 0, 0, 0, 0, 0 /* 'x */ );
+  check( 1, 0, 0, 0, 0 'x );
+  check( 1, 0, 0, 1, 0 'x );
+  check( 0, 0, 0, 0, 0 'x );
+  check( 0, 0, 0, 1, 0 'x );
+  check( 0, 0, 0, 0, 0 'x );
 
   // ---- rising clock edge here ---
 
-  check( 1, 0, 0, 0, 0 /* 'x */ );
+  check( 1, 0, 0, 0, 0 'x );
 
   t.test_case_end();
 endtask

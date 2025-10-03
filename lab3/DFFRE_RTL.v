@@ -21,26 +21,12 @@ module DFFRE_RTL
   //''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
   // You _must_ use a single always_ff block for you RTL modeling. You
   // cannot use any explicit gate-level modeling.
-  //''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-  //:
-  //: `ECE2300_UNUSED( clk );
-  //: `ECE2300_UNUSED( rst );
-  //: `ECE2300_UNUSED( en );
-  //: `ECE2300_UNUSED( d );
-  //: `ECE2300_UNDRIVEN( q );
-  //:
 
-  always_ff @( posedge clk ) begin
-
-    if ( rst )
-      q <= 0;
-    else if ( en )
-      q <= d;
-
-    // explicit xprop
-    `ECE2300_SEQ_XPROP( q, $isunknown(rst) || $isunknown(en) );
-
-  end
+  `ECE2300_UNUSED( clk );
+  `ECE2300_UNUSED( rst );
+  `ECE2300_UNUSED( en );
+  `ECE2300_UNUSED( d );
+  `ECE2300_UNDRIVEN( q );
 
 endmodule
 

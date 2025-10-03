@@ -18,28 +18,13 @@ module Mux2_1b_GL
   //''' LAB ASSIGNMENT '''''''''''''''''''''''''''''''''''''''''''''''''''
   // Implement 1-bit 2-to-1 mux using gate-level modeling
   //>'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-  //:
-  //: // remove these lines before starting your implementation
-  //: `ECE2300_UNUSED( in0 );
-  //: `ECE2300_UNUSED( in1 );
-  //: `ECE2300_UNUSED( sel );
-  //: `ECE2300_UNDRIVEN( out );
-  //:
 
-  wire sel_b;
-  not( sel_b, sel );
-
-  wire t1;
-  and( t1, in0, sel_b );
-
-  wire t2;
-  and( t2, in1, sel );
-
-  or( out, t1, t2 );
-
-  //<'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+  // remove these lines before starting your implementation
+  `ECE2300_UNUSED( in0 );
+  `ECE2300_UNUSED( in1 );
+  `ECE2300_UNUSED( sel );
+  `ECE2300_UNDRIVEN( out );
 
 endmodule
 
 `endif /* MUX2_1B_GL */
-

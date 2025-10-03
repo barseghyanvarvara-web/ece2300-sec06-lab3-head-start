@@ -20,29 +20,12 @@ module DFFR_GL
   //''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
   // You should instantiate a DFF, then add appropriate logic to
   // implement reset. You _must_ use explict gate-level modeling.
-  //:
-  //: `ECE2300_UNUSED( clk );
-  //: `ECE2300_UNUSED( rst );
-  //: `ECE2300_UNUSED( d );
-  //: `ECE2300_UNDRIVEN( q );
-  //:
 
-  wire rst_b;
-  not( rst_b, rst );
-
-  wire d_;
-  and( d_, rst_b, d );
-
-  DFF_GL dff
-  (
-    .clk (clk),
-    .d   (d_),
-    .q   (q)
-  );
-
-  //<'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+  `ECE2300_UNUSED( clk );
+  `ECE2300_UNUSED( rst );
+  `ECE2300_UNUSED( d );
+  `ECE2300_UNDRIVEN( q );
 
 endmodule
 
 `endif /* DFFR_GL_V */
-

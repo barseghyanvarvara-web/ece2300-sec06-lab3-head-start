@@ -85,24 +85,24 @@ task test_case_2_exhaustive();
   // ---- rising clock edge here ---
 
   //    clk d  q
-  check( 1, 0, 0 /* 'x */ );
-  check( 1, 1, 0 /* 'x */ );
-  check( 0, 0, 0 /* 'x */ );
-  check( 0, 1, 0 /* 'x */ );
+  check( 1, 0, 'x );
+  check( 1, 1, 'x );
+  check( 0, 0, 'x );
+  check( 0, 1, 'x );
 
   // ---- rising clock edge here ---
 
   //    clk d  q
-  check( 1, 0, 1 /* 'x */ );
-  check( 1, 1, 1 /* 'x */ );
-  check( 0, 0, 1 /* 'x */ );
-  check( 0, 1, 1 /* 'x */ );
-  check( 0, 0, 1 /* 'x */ );
+  check( 1, 0, 'x );
+  check( 1, 1, 'x );
+  check( 0, 0, 'x );
+  check( 0, 1, 'x );
+  check( 0, 0, 'x );
 
   // ---- rising clock edge here ---
 
   //    clk d  q
-  check( 1, 0, 0 /* 'x */ );
+  check( 1, 0, 'x );
 
   t.test_case_end();
 endtask
