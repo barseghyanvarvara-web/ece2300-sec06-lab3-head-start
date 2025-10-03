@@ -80,7 +80,7 @@
 `ifndef ALTERA_RESERVED_QIS
 `define ECE2300_SEQ_XPROP( signal_, expression_ ) \
   if ( expression_ ) \
-    signal_ = 'x;
+    signal_ <= 'x;
 `else
 `define ECE2300_SEQ_XPROP( signal_, expression_ ) \
   if (0)
