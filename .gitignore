@@ -15,10 +15,21 @@ admin/work*
 *~
 .lock*
 *.swp
+*.log
 *-adhoc
 *-test
-*-test.sh
+*-sim
 *.vcd
 .vscode/
 .vscode/*
 *__pycache__
+
+# hack for now -cbatten
+admin/groups-all.txt
+admin/groups-rest.txt
+admin/groups-short.txt
+admin/groups.txt
+admin/repos-all.txt
+admin/repos.txt
+admin/netids.txt
+
