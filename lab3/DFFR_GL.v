@@ -15,16 +15,18 @@ module DFFR_GL
   (* keep=1 *) output wire q
 );
 
-  //''' LAB ASSIGNMENT '''''''''''''''''''''''''''''''''''''''''''''''''''
-  // Implement a D flip-flop with reset
-  //''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-  // You should instantiate a DFF, then add appropriate logic to
-  // implement reset. You _must_ use explict gate-level modeling.
+  wire rst_bar, anded;
 
-  `ECE2300_UNUSED( clk );
-  `ECE2300_UNUSED( rst );
-  `ECE2300_UNUSED( d );
-  `ECE2300_UNDRIVEN( q );
+  not(rst_bar, rst);
+  and(anded, rst_bar, d);
+
+  DFF_GL flipflop (
+
+    .clk(clk),
+    .d(anded),
+    .q(q)
+
+  );
 
 endmodule
 

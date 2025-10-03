@@ -15,13 +15,25 @@ module DFF_GL
   output wire q
 );
 
-  //''' LAB ASSIGNMENT '''''''''''''''''''''''''''''''''''''''''''''''''''
-  // Implement a single-bit D flip-flop using a D Latch
-  //''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+wire N1, clk_bar;
 
-  `ECE2300_UNUSED( clk );
-  `ECE2300_UNUSED( d );
-  `ECE2300_UNDRIVEN( q );
+not(clk_bar, clk);
+
+DLatch_GL followerlatch (
+
+  .clk(clk),
+  .d(N1),
+  .q(q)
+
+);
+
+DLatch_GL leaderlatch (
+
+  .clk(clk_bar),
+  .d(d),
+  .q(N1)
+
+);
 
 endmodule
 

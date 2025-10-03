@@ -22,16 +22,27 @@ module DFFRE_GL
   (* keep=1 *) output wire q
 );
 
-  //''' LAB ASSIGNMENT '''''''''''''''''''''''''''''''''''''''''''''''''''
-  // Implement a D enabled & resettable flip-flop using DFF and mux. You
-  // can also use a DFFR and a mux if you like.
-  //''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+  wire rst_bar, mux_in, d_in;
 
-  `ECE2300_UNUSED( clk );
-  `ECE2300_UNUSED( rst );
-  `ECE2300_UNUSED( en );
-  `ECE2300_UNUSED( d );
-  `ECE2300_UNDRIVEN( q );
+  not(rst_bar, rst);
+  and(d_in, rst_bar, mux_in);
+
+  Mux2_1b_GL mux(
+
+  .in0  (d),
+  .in1  (q),
+  .sel  (en),
+  .out  (mux_in)
+     
+  );
+
+  DFF_GL flipflop (
+
+    .clk(clk),
+    .d(d_in),
+    .q(q)
+
+  );
 
 endmodule
 

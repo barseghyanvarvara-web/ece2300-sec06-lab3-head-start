@@ -105,15 +105,15 @@ module Top();
 
     //    clk d  q
     check( 0, 0, 'x, t.outputs_undefined );
-    check( 1, 0, 'x ); // d=0, latch is transparent
-    check( 1, 1, 'x ); // d=1, latch is transparent
-    check( 0, 0, 'x ); // d=0, latch is opaque
-    check( 0, 1, 'x ); // d=1, latch is opaque
-    check( 1, 0, 'x ); // d=0, latch is transparent
-    check( 1, 0, 'x ); // d=0, latch is transparent
-    check( 0, 0, 'x ); // d=0, latch is opaque
-    check( 0, 1, 'x ); // d=1, latch is opaque
-    check( 1, 0, 'x ); // return to original state
+    check( 1, 0, 0 ); // d=0, latch is transparent
+    check( 1, 1, 1 ); // d=1, latch is transparent
+    check( 0, 0, 1); // d=0, latch is opaque
+    check( 0, 1, 1 ); // d=1, latch is opaque
+    check( 1, 0, 0 ); // d=0, latch is transparent
+    check( 1, 0, 0 ); // d=0, latch is transparent
+    check( 0, 0, 0 ); // d=0, latch is opaque
+    check( 0, 1, 0 ); // d=1, latch is opaque
+    check( 1, 0, 0 ); // return to original state
 
     t.test_case_end();
   endtask
